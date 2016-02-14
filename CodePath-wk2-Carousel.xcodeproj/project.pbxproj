@@ -17,6 +17,9 @@
 		E12A53481C6FDADC00E564C5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A53471C6FDADC00E564C5 /* Common.swift */; };
 		E12A534A1C6FDD3E00E564C5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A53491C6FDD3E00E564C5 /* IntroViewController.swift */; };
 		E12A534E1C6FFB0500E564C5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A534D1C6FFB0500E564C5 /* SignInViewController.swift */; };
+		E12A53501C705B5100E564C5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A534F1C705B5100E564C5 /* WelcomeViewController.swift */; };
+		E12A53521C7075FA00E564C5 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A53511C7075FA00E564C5 /* ConversationsViewController.swift */; };
+		E12A53541C7076C700E564C5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A53531C7076C700E564C5 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		E12A53471C6FDADC00E564C5 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		E12A53491C6FDD3E00E564C5 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		E12A534D1C6FFB0500E564C5 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
+		E12A534F1C705B5100E564C5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		E12A53511C7075FA00E564C5 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		E12A53531C7076C700E564C5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,9 @@
 				E101A15B1C6FD8770060E929 /* AppDelegate.swift */,
 				E101A15D1C6FD8770060E929 /* ViewController.swift */,
 				E101A15F1C6FD8770060E929 /* Main.storyboard */,
+				E12A53531C7076C700E564C5 /* SettingsViewController.swift */,
+				E12A53511C7075FA00E564C5 /* ConversationsViewController.swift */,
+				E12A534F1C705B5100E564C5 /* WelcomeViewController.swift */,
 				E12A53491C6FDD3E00E564C5 /* IntroViewController.swift */,
 				E101A1621C6FD8770060E929 /* Assets.xcassets */,
 				E101A1641C6FD8770060E929 /* LaunchScreen.storyboard */,
@@ -270,9 +279,12 @@
 			files = (
 				E101A15E1C6FD8770060E929 /* ViewController.swift in Sources */,
 				E12A53481C6FDADC00E564C5 /* Common.swift in Sources */,
+				E12A53521C7075FA00E564C5 /* ConversationsViewController.swift in Sources */,
 				E101A15C1C6FD8770060E929 /* AppDelegate.swift in Sources */,
+				E12A53501C705B5100E564C5 /* WelcomeViewController.swift in Sources */,
 				E12A534E1C6FFB0500E564C5 /* SignInViewController.swift in Sources */,
 				E12A534A1C6FDD3E00E564C5 /* IntroViewController.swift in Sources */,
+				E12A53541C7076C700E564C5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
