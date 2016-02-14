@@ -14,6 +14,9 @@
 		E101A1661C6FD8770060E929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E101A1641C6FD8770060E929 /* LaunchScreen.storyboard */; };
 		E101A1711C6FD8770060E929 /* CodePath_wk2_CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101A1701C6FD8770060E929 /* CodePath_wk2_CarouselTests.swift */; };
 		E101A17C1C6FD8770060E929 /* CodePath_wk2_CarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101A17B1C6FD8770060E929 /* CodePath_wk2_CarouselUITests.swift */; };
+		E12A53481C6FDADC00E564C5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A53471C6FDADC00E564C5 /* Common.swift */; };
+		E12A534A1C6FDD3E00E564C5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A53491C6FDD3E00E564C5 /* IntroViewController.swift */; };
+		E12A534E1C6FFB0500E564C5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A534D1C6FFB0500E564C5 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		E101A1771C6FD8770060E929 /* CodePath-wk2-CarouselUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodePath-wk2-CarouselUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E101A17B1C6FD8770060E929 /* CodePath_wk2_CarouselUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePath_wk2_CarouselUITests.swift; sourceTree = "<group>"; };
 		E101A17D1C6FD8770060E929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12A53471C6FDADC00E564C5 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E12A53491C6FDD3E00E564C5 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		E12A534D1C6FFB0500E564C5 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,15 @@
 		E101A15A1C6FD8770060E929 /* CodePath-wk2-Carousel */ = {
 			isa = PBXGroup;
 			children = (
+				E12A534D1C6FFB0500E564C5 /* SignInViewController.swift */,
 				E101A15B1C6FD8770060E929 /* AppDelegate.swift */,
 				E101A15D1C6FD8770060E929 /* ViewController.swift */,
 				E101A15F1C6FD8770060E929 /* Main.storyboard */,
+				E12A53491C6FDD3E00E564C5 /* IntroViewController.swift */,
 				E101A1621C6FD8770060E929 /* Assets.xcassets */,
 				E101A1641C6FD8770060E929 /* LaunchScreen.storyboard */,
 				E101A1671C6FD8770060E929 /* Info.plist */,
+				E12A53471C6FDADC00E564C5 /* Common.swift */,
 			);
 			path = "CodePath-wk2-Carousel";
 			sourceTree = "<group>";
@@ -260,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E101A15E1C6FD8770060E929 /* ViewController.swift in Sources */,
+				E12A53481C6FDADC00E564C5 /* Common.swift in Sources */,
 				E101A15C1C6FD8770060E929 /* AppDelegate.swift in Sources */,
+				E12A534E1C6FFB0500E564C5 /* SignInViewController.swift in Sources */,
+				E12A534A1C6FDD3E00E564C5 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +497,7 @@
 				E101A1821C6FD8770060E929 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E101A1831C6FD8770060E929 /* Build configuration list for PBXNativeTarget "CodePath-wk2-CarouselTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +506,7 @@
 				E101A1851C6FD8770060E929 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E101A1861C6FD8770060E929 /* Build configuration list for PBXNativeTarget "CodePath-wk2-CarouselUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +515,7 @@
 				E101A1881C6FD8770060E929 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
