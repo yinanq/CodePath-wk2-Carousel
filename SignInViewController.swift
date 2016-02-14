@@ -9,7 +9,6 @@
 import UIKit
 
 class SignInViewController: UIViewController, UIScrollViewDelegate {
-
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fieldParentView: UIView!
@@ -19,6 +18,8 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    let email = "snooker@yinandesign.com"
+    let password = "147"
     var buttonInitialY: CGFloat!
     var buttonOffsetY: CGFloat!
     
@@ -33,7 +34,7 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         
         // https://guides.codepath.com/ios/Registering-for-Keyboard-Events
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         
         buttonInitialY = buttonParentView.frame.origin.y
         buttonOffsetY = -120
@@ -52,7 +53,7 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentOffset.y = scrollView.contentInset.bottom
     }
     func keyboardWillHide(notfication: NSNotification!){
-        
+        print("keyboardWillHide")
     }
     
     func delay(delay:Double, closure:()->()) {
@@ -65,15 +66,14 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func signInTouchUpInside(sender: AnyObject) {
-        // https://guides.codepath.com/ios/Creating-a-Log-In-Screen#step-2-configure-text-field-properties
+        print("sign in button touch up inside")
         
         // 1. give feedback as soon as TouchUpInside:
 //        signInButton.selected = true
         signInButtonActivityIndicator.startAnimating()
         
         // 2. depends on if sign in succeeds:
-        if emailField.text == "learning2code@yinandesign.com" && passwordField.text == "147"{
-            // if sign in succeeds:
+        if emailField.text == email && passwordField.text == password{
             print("sign in success")
             
             //delay x seconds, then run code between {}:
@@ -86,13 +86,12 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
                 self.performSegueWithIdentifier("signInSegue", sender: nil)
             })
         }else{
-            // if sign in fails:
             print("sign in fail")
             delay(2, closure: { () -> () in
                 // Stop animating the activity indicator.
                 self.signInButtonActivityIndicator.stopAnimating()
                 // Set the button state back to default, "Not Selected".
-//                self.signInButton.selected = false
+                self.signInButton.selected = false
                 // Create and Show UIAlertController...see guide, Using UIAlertController
             })
         }
