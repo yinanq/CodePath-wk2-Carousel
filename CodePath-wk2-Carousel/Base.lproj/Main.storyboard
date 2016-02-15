@@ -539,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxF-CE-MUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="3667.5"/>
+            <point key="canvasLocation" x="1832" y="3962.5"/>
         </scene>
         <!--Conversations View Controller-->
         <scene sceneID="LBa-AO-0gf">
@@ -568,6 +568,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fl-8p-WPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2220" y="2578.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ulj-RX-Bth">
+            <objects>
+                <viewController id="PvN-ID-aaJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="abm-68-e2E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="optional story &quot;Learn more about Carousel&quot; TBD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nfk-xX-dmz">
+                                <rect key="frame" x="20" y="273" width="368" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWG-fQ-haR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2605" y="2292"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nUd-Yg-AXU">
