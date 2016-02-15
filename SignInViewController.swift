@@ -23,14 +23,14 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
     
     
     // https://guides.codepath.com/ios/Using-UIAlertController
-    // 1. create aler controller
+    // 1. create alert controller
     let missingEmailAlertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
     let missingPasswordAlertController = UIAlertController(title: "Password Required", message: "Please enter your password", preferredStyle: .Alert)
     let missingBothAlertController = UIAlertController(title: "Email and Password Required", message: "Please enter your email and password", preferredStyle: .Alert)
     let wrongEmailOrPasswordAlertController = UIAlertController(title: "Invalid Email or Password", message: "Please enter correct email and password", preferredStyle: .Alert)
-    // 2. create action
+    // 2. create action buttons
     let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-        // handle response here.
+        // code for what happens after tapping the button. leaving it empty lets the button dismiss the view.
     }
     
     var buttonInitialY: CGFloat!
@@ -40,6 +40,7 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         scrollView.contentSize = scrollView.frame.size
         scrollView.contentInset.bottom = 100
         
@@ -53,27 +54,54 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
         buttonOffsetY = -120
         
         // https://guides.codepath.com/ios/Using-UIAlertController
-        // 3. add action to the alert controller
+        // 3. add action button to alert controllers
         missingEmailAlertController.addAction(okAction)
         missingPasswordAlertController.addAction(okAction)
         missingBothAlertController.addAction(okAction)
         wrongEmailOrPasswordAlertController.addAction(okAction)
     }
 
+    // content appear animation starting values
+    override func viewWillAppear(animated: Bool) {
+        // Set initial transform values x% of original size
+        let transform = CGAffineTransformMakeScale(0.9, 0.9)
+        // Apply the transform properties of the views
+        fieldParentView.transform = transform
+        // Set the alpha properties of the views to transparent
+        fieldParentView.alpha = 0
+    }
+    
+    // content appear animation duration and end values
+    override func viewDidAppear(animated: Bool) {
+        //Animate the code within over 0.3 seconds...
+        UIView.animateWithDuration(0.3) { () -> Void in
+            // Return the views transform properties to their default states.
+            self.fieldParentView.transform = CGAffineTransformIdentity
+            // Set the alpha properties of the views to fully opaque
+            self.fieldParentView.alpha = 1
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // https://guides.codepath.com/ios/Registering-for-Keyboard-Events
-    
     func keyboardWillShow(notification: NSNotification!){
         print("keyboardWillShow")
         buttonParentView.frame.origin.y = buttonInitialY + buttonOffsetY
         scrollView.contentOffset.y = scrollView.contentInset.bottom
     }
+    // end editing and scroll back to top if scrolled down by certain amount
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= 30 {
+            view.endEditing(true)
+        }
+    }
     func keyboardWillHide(notfication: NSNotification!){
         print("keyboardWillHide")
+        buttonParentView.frame.origin.y = buttonInitialY
     }
     
     func delay(delay:Double, closure:()->()) {
@@ -140,6 +168,12 @@ class SignInViewController: UIViewController, UIScrollViewDelegate {
             }
         }
     }
+    
+    @IBAction func backButtonTouchUpInside(sender: AnyObject) {
+        // nav back with reverse push animation
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
     /*
     // MARK: - Navigation
     
