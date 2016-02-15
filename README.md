@@ -32,4 +32,5 @@ Stories completed (all required and optional stories except the optional "Learn 
   - User can log out
 
 GIF walkthrough (using LiceCap):
+
 ![tiiip](https://cloud.githubusercontent.com/assets/14037687/13041895/59e8d2ba-d370-11e5-8ac9-c3efbcccb60b.gif)
